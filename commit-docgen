@@ -1,0 +1,13 @@
+Post commit: /home/matt/src/ruby/coord
+
+                           coord.rb: c..m..........c..........c..c.c..c..c..
+                         convert.rb: .......
+                      coord_test.rb: c.m.c.......c...
+Generating HTML...
+Diagrams: .....
+
+Files:   3
+Classes: 10
+Modules: 2
+Methods: 50
+Elapsed: 47.157s

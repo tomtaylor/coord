@@ -1,0 +1,20 @@
+coord.rb and coord_test.rb: Geographical coordinate manipulation.
+Copyright (C) 2005 M Foster <mattfoster@clara.co.uk>
+
+coord.rb:
+	* Convert to and from a variety of geograhical coordinate systems.
+		lat and long, 3D cartesian, transverse mercator.
+	* Convert eastings and northings to national grid (UK only)
+	* Convert to and from various geographical coordinate types.
+		degrees mins secs to decimal degrees, degrees mins and decimal mins etc.
+	* Simple angle conversion through Numeric extension
+		e.g: 180.deg_to_rad
+
+coord_test.rb
+	* Full unit tests for the above.
+
+Documentation can be found in the doc directory.
+
+Todo:
+	add more national grids.
+	add more ellipsoid and projection types.

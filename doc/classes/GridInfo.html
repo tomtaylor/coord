@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: GridInfo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">GridInfo</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/home/matt/src/ruby/coord/coord_rb.html">
+                /home/matt/src/ruby/coord/coord.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="Info.html">
+                Info
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+    <div id="diagram">
+      <map id="map" name="map">
+  <area shape="RECT" coords="40,125,120,173"      href="Coordinate.html" alt="Coordinate">
+  <area shape="RECT" coords="144,125,237,173"      href="ProjectionInfo.html" alt="ProjectionInfo">
+  <area shape="RECT" coords="261,125,333,173"      href="GridInfo.html" alt="GridInfo">
+  <area shape="RECT" coords="261,29,333,77"      href="Info.html" alt="Info">
+  <area shape="RECT" coords="357,125,442,173"      href="EllipsoidInfo.html" alt="EllipsoidInfo">
+  <area shape="RECT" coords="357,29,429,77"      href="Numeric.html" alt="Numeric">
+  <area shape="RECT" coords="453,29,538,77"      href="Coordinates.html" alt="Coordinates">
+  <area shape="RECT" coords="18,18,141,65"      href="CoordinateConversion.html" alt="CoordinateConversion">
+</map>
+<img src="../dot/f_0.png" usemap="#map" border=0 alt="TopLevel">
+    </div>
+
+    <div id="description">
+      <p>
+A class containing information about (various) National Grids, for use in
+<tt>ng_to_en</tt> and <tt>en_to_ng</tt>
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000018">new</a>&nbsp;&nbsp;
+      <a href="#M000019">returnInfo</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="#M000018" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">(type = 'GB')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000018-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000018-source">
+<pre>
+<span class="ruby-comment cmt"># File /home/matt/src/ruby/coord/coord.rb, line 415</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">type</span> = <span class="ruby-value str">'GB'</span>)
+    <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="#M000019" class="method-signature">
+          <span class="method-name">returnInfo</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return info on selected grid.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000019-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000019-source">
+<pre>
+<span class="ruby-comment cmt"># File /home/matt/src/ruby/coord/coord.rb, line 420</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">returnInfo</span>
+    <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@type</span>
+    <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'GB'</span>
+      <span class="ruby-identifier">grid</span> = [[<span class="ruby-value str">'SV'</span>, <span class="ruby-value str">'SW'</span>, <span class="ruby-value str">'SX'</span>, <span class="ruby-value str">'SY'</span>, <span class="ruby-value str">'SZ'</span>, <span class="ruby-value str">'TV'</span>, <span class="ruby-value str">'TW'</span>],
+              [<span class="ruby-value str">'SQ'</span>, <span class="ruby-value str">'SR'</span>, <span class="ruby-value str">'SS'</span>, <span class="ruby-value str">'ST'</span>, <span class="ruby-value str">'SU'</span>, <span class="ruby-value str">'TQ'</span>, <span class="ruby-value str">'TR'</span>],
+              [<span class="ruby-value str">'SL'</span>, <span class="ruby-value str">'SM'</span>, <span class="ruby-value str">'SN'</span>, <span class="ruby-value str">'SO'</span>, <span class="ruby-value str">'SP'</span>, <span class="ruby-value str">'TL'</span>, <span class="ruby-value str">'TM'</span>], 
+              [<span class="ruby-value str">'SF'</span>, <span class="ruby-value str">'SG'</span>, <span class="ruby-value str">'SH'</span>, <span class="ruby-value str">'SJ'</span>, <span class="ruby-value str">'SK'</span>, <span class="ruby-value str">'TF'</span>, <span class="ruby-value str">'TG'</span>],
+              [<span class="ruby-value str">'SA'</span>, <span class="ruby-value str">'SB'</span>, <span class="ruby-value str">'SC'</span>, <span class="ruby-value str">'SD'</span>, <span class="ruby-value str">'SE'</span>, <span class="ruby-value str">'TA'</span>, <span class="ruby-value str">'TB'</span>],
+              [<span class="ruby-value str">'NV'</span>, <span class="ruby-value str">'NW'</span>, <span class="ruby-value str">'NX'</span>, <span class="ruby-value str">'NY'</span>, <span class="ruby-value str">'NZ'</span>, <span class="ruby-value str">'OV'</span>, <span class="ruby-value str">'OW'</span>],
+              [<span class="ruby-value str">'NQ'</span>, <span class="ruby-value str">'NR'</span>, <span class="ruby-value str">'NS'</span>, <span class="ruby-value str">'NT'</span>, <span class="ruby-value str">'NU'</span>, <span class="ruby-value str">'OQ'</span>, <span class="ruby-value str">'OR'</span>],
+              [<span class="ruby-value str">'NL'</span>, <span class="ruby-value str">'NM'</span>, <span class="ruby-value str">'NN'</span>, <span class="ruby-value str">'NO'</span>, <span class="ruby-value str">'NP'</span>, <span class="ruby-value str">'OL'</span>, <span class="ruby-value str">'OM'</span>],
+              [<span class="ruby-value str">'NF'</span>, <span class="ruby-value str">'NG'</span>, <span class="ruby-value str">'NH'</span>, <span class="ruby-value str">'NJ'</span>, <span class="ruby-value str">'NK'</span>, <span class="ruby-value str">'OF'</span>, <span class="ruby-value str">'OG'</span>],
+              [<span class="ruby-value str">'NA'</span>, <span class="ruby-value str">'NB'</span>, <span class="ruby-value str">'NC'</span>, <span class="ruby-value str">'ND'</span>, <span class="ruby-value str">'NE'</span>, <span class="ruby-value str">'OA'</span>, <span class="ruby-value str">'OB'</span>],
+              [<span class="ruby-value str">'HV'</span>, <span class="ruby-value str">'HW'</span>, <span class="ruby-value str">'HX'</span>, <span class="ruby-value str">'HY'</span>, <span class="ruby-value str">'HZ'</span>, <span class="ruby-value str">'JV'</span>, <span class="ruby-value str">'JW'</span>],
+              [<span class="ruby-value str">'HQ'</span>, <span class="ruby-value str">'HR'</span>, <span class="ruby-value str">'HS'</span>, <span class="ruby-value str">'HT'</span>, <span class="ruby-value str">'HU'</span>, <span class="ruby-value str">'JQ'</span>, <span class="ruby-value str">'JR'</span>],
+              [<span class="ruby-value str">'HL'</span>, <span class="ruby-value str">'HM'</span>, <span class="ruby-value str">'HN'</span>, <span class="ruby-value str">'HO'</span>, <span class="ruby-value str">'HP'</span>, <span class="ruby-value str">'JL'</span>, <span class="ruby-value str">'JM'</span>]] 
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">'Bad input argument'</span>, <span class="ruby-identifier">caller</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">grid</span>
+  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
